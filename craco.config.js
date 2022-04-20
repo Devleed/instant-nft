@@ -13,7 +13,6 @@ module.exports = {
           ].filter(Boolean),
           background: './src/background.js',
           content: './src/content.js',
-          script: './src/scripts/logBody.js',
         },
         output: {
           ...webpackConfig.output,

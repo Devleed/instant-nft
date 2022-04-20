@@ -10,9 +10,9 @@
 //   document.body.appendChild(script);
 // }
 
-// chrome.action.onClicked.addListener(tab => {
-//   chrome.scripting.executeScript({
-//     target: { tabId: tab.id },
-//     function: injectedFunction,
-//   });
-// });
+chrome.action.onClicked.addListener(tab => {
+  chrome.scripting.executeScript({
+    target: { tabId: tab.id },
+    files: ['script2.js'],
+  });
+});
